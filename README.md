@@ -1,6 +1,6 @@
 # ood-class-separation
 
-This repo contains additional implementation details, numerical results and the Python code for the paper "Class Separation is not what you need for Relational Reasonig-based OOD Detection",
+This repo contains additional implementation details, numerical results and the Python code for the paper "Large Class Separation is not what you need for Relational Reasoning-based OOD Detection",
 accepted at ICIAP 2023.
 
 ## Implementation details
@@ -460,3 +460,74 @@ class="math inline"><em>R</em><sup>2</sup></span></td>
 </table>
 </div>
 </div>
+
+
+## Running the code
+
+### Code requirements
+
+Install the packages specified in `requirements.txt` via pip:
+```shell
+pip install -r requirements.txt
+```
+
+### Datasets
+
+You will need:
+- [ImageNet-1K](https://www.image-net.org/download.php) (used for training)
+- [DomainNet](http://ai.bu.edu/DomainNet) (used for evaluation)
+
+You should place the datasets under `~/data`, following this structure:
+```
+~/data
+|-- ImageNet/Data/CLS-LOC/train/<cls>/<img.jpg>
+|-- DomainNet/<domain>/<cls>/<img.jpg>
+```
+
+### Training
+
+To train the model, simply run `train.py`. \
+You can choose different objective functions via the `--loss_function` parameter.
+
+### Eval
+
+You can test a model by running:
+```shell
+python train.py --only_eval --checkpoint_folder_path <checkpoint_folder> --dataset <test_dataset> [--source <source> --target <target>]
+```
+
+- `checkpoint_folder` should refer to a directory containing `cls_rel.pkl` and `feature_extractor.pkl`
+- `test_dataset` should be one of the following:
+    - `DTD` (intra-domain Texture)
+    - `DomainNet_IN_OUT` (intra-domain Real)
+    - `DomainNet_Painting` (intra-domain Painting)
+    - `DomainNet_Sketch` (intra-domain Sketch)
+    - `DomainNet_DG` (cross-domain)
+- When evaluating on `DomainNet_DG` , `source` and `target` should be used to specify the desired domains
+(`Real`, `Painting` or `Sketch`)
+
+### $R^2$ computation
+
+You can compute the $R^2$ value related to a model by running:
+```shell
+python r2.py --checkpoint_folder_path <checkpoint_folder>
+```
+
+
+## Citation
+
+If you find our code useful, please cite our paper:
+```
+@inproceedings{lu2023oodclassseparation,
+  title={Large Class Separation is not what you need for Relational Reasoning-based OOD Detection},
+  author={Lorenzo Lu, Giulia D’Ascenzi, Francesco Cappio Borlino, Tatiana Tommasi},
+  booktitle={International Conference on Image Analysis and Processing (ICIAP)},
+  year={2023}
+}
+```
+
+
+## Other useful links
+
+- [ReSeND repo](https://github.com/FrancescoCappio/ReSeND)
+- [ReSeND's competitors](https://github.com/FrancescoCappio/OODDetectionBench/tree/Resend_competitors)

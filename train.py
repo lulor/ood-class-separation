@@ -30,14 +30,9 @@ def get_args():
     parser.add_argument("--local_rank", type=int)  # automatically passed by torch.distributed.launch
 
     parser.add_argument("--dataset", default="ImageNet", help="Dataset name",
-                        choices=["ImageNet", "OfficeHome_DG", "PACS_DG", "MultiDatasets_DG", 'DTD', 
-                                 'DomainNet_IN_OUT','DomainNet_Painting','OfficeHome_SS_DG','PACS_SS_DG','DomainNet_Sketch',
-                                 "imagenet_ood", "imagenet_ood_small", "Places", "DomainNet_DG"])
-    parser.add_argument("--source",
-                        help="Source_OH: no_Product, no_Art, no_Clipart, no_RealWorld | Source_PACS: no_ArtPainting, no_Cartoon, no_Photo, no_Sketch | Source_MultiDatasets: Sources")
-    parser.add_argument("--target",
-                        help="Target_OH: Product, Art, Clipart, RealWorld | Target_PACS: ArtPainting, Cartoon, Photo, Sketch | Target_MultiDatasets: Clipart,Painting,Real,Sketch")
-
+                        choices=["ImageNet", "DTD", "DomainNet_IN_OUT", "DomainNet_Painting", "DomainNet_Sketch", "DomainNet_DG"])
+    parser.add_argument("--source", help="Intra: in_distribution | DomainNet_DG: Real, Painting, Sketch")
+    parser.add_argument("--target", help="Intra: out_distribution | DomainNet_DG: Real, Painting, Sketch")
     parser.add_argument("--path_to_txt", default="data/txt_lists/", help="Path to the txt files")
 
     # data augmentation
