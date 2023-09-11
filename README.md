@@ -80,7 +80,7 @@ class="math inline"><em>R</em><sup>2</sup></span></td>
 <td style="text-align: center;">0.853</td>
 <td style="text-align: center;">0.660</td>
 <td style="text-align: center;">0.868</td>
-<td style="text-align: center;">0.520</td>
+<td style="text-align: center;">0.533</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">c=10</td>
@@ -94,7 +94,7 @@ class="math inline"><em>R</em><sup>2</sup></span></td>
 <td style="text-align: center;"><strong>0.809</strong></td>
 <td style="text-align: center;">0.702</td>
 <td style="text-align: center;">0.846</td>
-<td style="text-align: center;">0.111</td>
+<td style="text-align: center;">0.108</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">c=50</td>
@@ -108,7 +108,7 @@ class="math inline"><em>R</em><sup>2</sup></span></td>
 <td style="text-align: center;">0.841</td>
 <td style="text-align: center;">0.695</td>
 <td style="text-align: center;">0.854</td>
-<td style="text-align: center;">0.015</td>
+<td style="text-align: center;">0.014</td>
 </tr>
 <tr class="even">
 <td rowspan="2" style="text-align: center;">BCE</td>
@@ -123,7 +123,7 @@ class="math inline"><em>R</em><sup>2</sup></span></td>
 <td style="text-align: center;">0.864</td>
 <td style="text-align: center;">0.642</td>
 <td style="text-align: center;">0.892</td>
-<td style="text-align: center;">0.592</td>
+<td style="text-align: center;">0.596</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">focal</td>
@@ -137,10 +137,10 @@ class="math inline"><em>R</em><sup>2</sup></span></td>
 <td style="text-align: center;">0.829</td>
 <td style="text-align: center;">0.652</td>
 <td style="text-align: center;">0.876</td>
-<td style="text-align: center;">0.441</td>
+<td style="text-align: center;">0.446</td>
 </tr>
 <tr class="even">
-<td rowspan="2" style="text-align: center;">CE</td>
+<td rowspan="2" style="text-align: center;">SCE</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">0.614</td>
 <td style="text-align: center;">0.948</td>
@@ -152,7 +152,7 @@ class="math inline"><em>R</em><sup>2</sup></span></td>
 <td style="text-align: center;">0.897</td>
 <td style="text-align: center;">0.617</td>
 <td style="text-align: center;">0.911</td>
-<td style="text-align: center;">0.592</td>
+<td style="text-align: center;">0.588</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">focal</td>
@@ -166,7 +166,7 @@ class="math inline"><em>R</em><sup>2</sup></span></td>
 <td style="text-align: center;">0.856</td>
 <td style="text-align: center;">0.680</td>
 <td style="text-align: center;">0.863</td>
-<td style="text-align: center;">0.362</td>
+<td style="text-align: center;">0.363</td>
 </tr>
 <tr class="even">
 <td rowspan="3" style="text-align: center;">H</td>
@@ -181,7 +181,7 @@ class="math inline"><em>R</em><sup>2</sup></span></td>
 <td style="text-align: center;">0.869</td>
 <td style="text-align: center;">0.612</td>
 <td style="text-align: center;">0.867</td>
-<td style="text-align: center;">0.487</td>
+<td style="text-align: center;">0.512</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">&delta;=0.1</td>
@@ -195,7 +195,7 @@ class="math inline"><em>R</em><sup>2</sup></span></td>
 <td style="text-align: center;">0.862</td>
 <td style="text-align: center;">0.677</td>
 <td style="text-align: center;">0.868</td>
-<td style="text-align: center;">0.251</td>
+<td style="text-align: center;">0.255</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">&delta;=0.01</td>
@@ -209,7 +209,7 @@ class="math inline"><em>R</em><sup>2</sup></span></td>
 <td style="text-align: center;">0.826</td>
 <td style="text-align: center;"><strong>0.711</strong></td>
 <td style="text-align: center;"><strong>0.841</strong></td>
-<td style="text-align: center;">0.101</td>
+<td style="text-align: center;">0.097</td>
 </tr>
 </tbody>
 </table>
@@ -365,7 +365,7 @@ class="math inline"><em>R</em><sup>2</sup></span></td>
 <td style="text-align: center;">0.441</td>
 </tr>
 <tr class="even">
-<td rowspan="2" style="text-align: center;">CE</td>
+<td rowspan="2" style="text-align: center;">SCE</td>
 <td style="text-align: center;">-</td>
 <td style="text-align: center;">0.603</td>
 <td style="text-align: center;">0.916</td>
